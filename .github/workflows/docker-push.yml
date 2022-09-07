@@ -22,9 +22,9 @@ jobs:
       run: echo "::set-output name=date::$(date +'%Y-%m-%d')"
 
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag shikashi/angular-action-img:${{ steps.date.outputs.date }}
+      run: docker build . --file Dockerfile --tag sraves/angular-action-img:${{ steps.date.outputs.date }}
   
     - name: Docker Push
-      run: docker push shikashi/angular-action-img:${{ steps.date.outputs.date }}
+      run: docker push sraves/angular-action-img:${{ steps.date.outputs.date }}
       
       
